@@ -1,7 +1,7 @@
 USE instacart;
 
 -- Doing the same thing as with in customer behavior to find the top 10 most popular products
-/*DROP TABLE IF EXISTS frequency_of_products;
+DROP TABLE IF EXISTS frequency_of_products;
 CREATE TABLE frequency_of_products AS
 SELECT product_id, number_of_appearance
 FROM (
@@ -30,7 +30,7 @@ JOIN (
     LIMIT 10
 ) AS f
 ON p.product_id = f.product_id
-ORDER BY f.number_of_appearance DESC;*/
+ORDER BY f.number_of_appearance DESC;
 
 -- now we want to identify the top 5 departments by sales volume and we use the products table with 
 -- the help of most popular products we just obtained
